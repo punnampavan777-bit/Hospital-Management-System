@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Doctor
+from .models import Patient
 
-class AdminDoctor(admin.ModelAdmin):
-    list_display=[ "name", "available_date", "available_time", "specialization" ]
+admin.site.register(Patient)
 
-admin.site.register(Doctor,AdminDoctor)

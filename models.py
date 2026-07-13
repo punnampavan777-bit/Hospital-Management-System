@@ -1,11 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class Doctor(models.Model):
-    name = models.CharField(max_length=100)
-    available_date = models.DateField()
-    available_time = models.TimeField()
-    specialization = models.CharField(max_length=100)
+class Patient(models.Model):
+    # patient_id=models.IntegerField(primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} - {self.specialization}"
+        return self.user.username 
+
 
