@@ -1,0 +1,24 @@
+{% load static %}
+<h2>Welcome to Hospital Management System</h2>
+
+<div class="options">
+    <a href="{% url 'register' %}">Patient Register</a> ||
+    <a href="{% url 'login' %}">Patient Login</a> ||
+    <a href="/admin/">Admin Login</a>
+</div>
+
+<link rel="stylesheet" href="{% static 'homestyles.css' %}">
+
+<div class="bodycontainer">
+    <div class="contacts">
+        <h3>HELP LINE</h3>
+        <h4>+91 8106008374</h4>
+        <h3>EMERGENCY</h3>
+        <h4>+91 8374972952</h4>
+        <h3>AMBULANCE</h3>
+        <h4>+91 6303369642</h4>
+    </div>
+    </div class="image">
+        <img src="{% static 'stethoscope.jpg' %}"/>
+    <div>
+</div>
